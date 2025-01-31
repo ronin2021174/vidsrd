@@ -25,12 +25,13 @@ app.get('/vidsrc/:tmdbId', async (req, res) => {
     try {
         if (season && episode) {
             const vidsrcresponse = await getvidsrc(id, season, episode);
+            console.log("Fetched Data:", vidsrcresponse); // Log fetched data
             res.status(200).json(vidsrcresponse);
         } else {
             const vidsrcresponse = await getvidsrc(id);
             res.status(200).json(vidsrcresponse);
         }
-        console.log("Fetched Data:", vidsrcresponse); // Log fetched data
+        
 
     } catch (error) {
         console.error('Error fetching data:', error);
