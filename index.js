@@ -58,3 +58,4 @@ app.get('/asiaheroku/:tmdbId', async (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`);
 });
+app.get('/favicon.ico', (req, res) => res.status(204).end());
