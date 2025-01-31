@@ -8,12 +8,16 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "index.js",
-            "headers": {
-                "Access-Control-Allow-Origin": "*"
-            }
+            "src": "/vidsrc/(.*)",
+            "dest": "/index.js"
+        },
+        {
+            "src": "/asiaheroku/(.*)",
+            "dest": "/index.js"
+        },
+        {
+            "src": "/",
+            "dest": "/index.js"
         }
-    ],
-    "installCommand": "npm install"
+    ]
 }
